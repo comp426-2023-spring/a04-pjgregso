@@ -7,7 +7,7 @@ var port;
 if (args.port) {
 	port = args.port;
 } else {
-	port = 5004;
+	port = 5000;
 }
 
 const app = express()
