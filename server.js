@@ -11,7 +11,6 @@ if (args.port) {
 }
 const app = express()
 app.use(express.json());
-
 app.get('/app/', (req, res) => {     
     res.status(200).send("200 OK")
 })
@@ -42,7 +41,6 @@ app.get('/app/rpsls/play/:shot/', (req, res) => {
 app.get('*', (req, res) => {
     res.status(404).send('404 NOT FOUND')
 })
-
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
 });
