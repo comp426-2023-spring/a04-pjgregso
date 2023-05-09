@@ -7,9 +7,8 @@ var port;
 if (args.port) {
 	port = args.port;
 } else {
-	port = 5000;
+	port = 5020;
 }
-
 const app = express()
 app.use(express.json());
 
