@@ -3,6 +3,7 @@ import minimist from 'minimist'
 import express from 'express'
 
 const args = minimist(process.argv.slice(2))
+
 var port;
 if (args.port) {
 	port = args.port;
@@ -19,12 +20,15 @@ app.get('/app/', (req, res) => {
 app.get('/app/rps/', (req, res) => {     
     res.status(200).send(rps(null));
 })
+
 app.get('/app/rpsls/', (req, res) => {   
     res.status(200).send(rpsls(null));
 })
+
 app.get('/app/rps/play/', (req, res) => {   
     res.status(200).send(rps(req.query.shot));
 })
+
 app.post('/app/rps/play/', (req, res) => {   
     res.status(200).send(rps(req.body.shot));
 })
