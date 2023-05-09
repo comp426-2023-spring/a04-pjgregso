@@ -15,6 +15,7 @@ app.use(express.json());
 app.get('/app/', (req, res) => {     
     res.status(200).send("200 OK")
 })
+
 app.get('/app/rps/', (req, res) => {     
     res.status(200).send(rps(null));
 })
